@@ -1,0 +1,14 @@
+{
+  "name": "napsify",
+  "version": "1.0.0",
+  "description": "Plataforma que sirve para búsqueda de alojamiento estudiantil.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Erick Téquiz & Jamil Andi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
