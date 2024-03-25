@@ -1,0 +1,1 @@
+Para los middlewares de Express que se pueda necesitar (autenticación, logs, manejo de errores).

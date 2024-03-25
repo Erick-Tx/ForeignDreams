@@ -1,8 +1,34 @@
-const express = require('express')
-const app = express()
+// Importa las librerías necesarias
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
+const alojamientosRoutes = require('./routes/alojamientos');
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+// Inicializa tu aplicación Express
+const app = express();
 
-app.listen(3000);
+// Middleware para parsear JSON
+app.use(express.json());
+
+// Configuración básica del puerto
+const PORT = process.env.PORT || 5000;
+
+// Conectar a MongoDB
+mongoose.connect(process.env.MONGODB_URI, {})
+.then(() => console.log("Conectado a MongoDB"))
+.catch(err => console.error("No se pudo conectar a MongoDB", err));
+
+// Definición de una ruta de prueba
+app.get('/', (req, res) => {
+    res.send('Hola Mundo!');
+});
+
+//rutas alojamiento
+app.use('/api/alojamientos', alojamientosRoutes);
+
+
+
+// Iniciar el servidor
+app.listen(PORT, () => {
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
+});
