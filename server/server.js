@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
 const alojamientosRoutes = require('./routes/alojamientos');
+const usuariosRoutes = require('./routes/usuarios');
 
 // Inicializa tu aplicación Express
 const app = express();
@@ -23,8 +24,13 @@ app.get('/', (req, res) => {
     res.send('Hola Mundo!');
 });
 
-//rutas alojamiento
+//rutas 
+
+//alojamiento
 app.use('/api/alojamientos', alojamientosRoutes);
+
+//usuario
+app.use('/api/usuarios', usuariosRoutes);
 
 
 
