@@ -16,6 +16,7 @@ const alojamientoSchema = new mongoose.Schema({
     precio: { type: Number, required: true },
     fotos: [String], // Array de URLs de imágenes
     disponibilidad: { type: Boolean, required: true, default: true },
+    propi: {type: mongoose.Schema.Types.ObjectId, ref: 'Propietario'}
     
     // Aquí se agregan más campos según la necesidad 
 }, { timestamps: true });

@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {FaFacebook, FaGoogle, FaTwitter } from 'react-icons/fa';
 
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -116,7 +117,7 @@ const LoginForm = () => {
         <LeftSection>
           <Title>Bienvenido a NAPSIFY</Title>
           <p>Por favor inicia con tu cuenta</p>
-          <Input placeholder="Usuario" />
+          <Input placeholder="Email" />
           <Input placeholder="Contraseña" type="password" />
           <Button>INICIAR</Button>
           <p>¿Olvidate tu contraseña?</p>

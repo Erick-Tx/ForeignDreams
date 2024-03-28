@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const alojamientosRoutes = require('./routes/alojamientos');
 const usuariosRoutes = require('./routes/usuarios');
+const propietariosRoutes = require('./routes/propietarios');
 
 // Inicializa tu aplicación Express
 const app = express();
@@ -31,6 +32,9 @@ app.use('/api/alojamientos', alojamientosRoutes);
 
 //usuario
 app.use('/api/usuarios', usuariosRoutes);
+
+//propietario
+app.use('/api/propietarios', propietariosRoutes);
 
 
 
