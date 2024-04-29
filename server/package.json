@@ -4,13 +4,26 @@
   "description": "Plataforma que sirve para búsqueda de alojamiento estudiantil.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test jest --testTimeout=5000",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "author": "Erick Téquiz & Jamil Andi",
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "author": "Tx_ForeingDreams",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "mongoose": "^8.2.3"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }
